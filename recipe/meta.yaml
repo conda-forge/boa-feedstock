@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.0.1.dev0" %}
+{% set version = "0.0.1.dev1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/TheSnakePit/boa/archive/{{ version }}.tar.gz
-  sha256: 534f89793dd8d7083b919d696f7d349d2c246df9b5f6763e7e7b9d34b16d1bd8
+  sha256: 9ef31e4b6510745af45b1cf0f9d911c4ffac71e49a069cf1b3fe579e00e627ad
 
 build:
   noarch: python
