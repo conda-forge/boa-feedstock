@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.0.1.dev1" %}
+{% set version = "0.0.1.dev2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/TheSnakePit/boa/archive/{{ version }}.tar.gz
-  sha256: 9ef31e4b6510745af45b1cf0f9d911c4ffac71e49a069cf1b3fe579e00e627ad
+  sha256: 1e8cc53a999691353ba7e7dcb4b215713bab1d7f8079f5186d4fb81667863463
 
 build:
   noarch: python
@@ -29,6 +29,8 @@ requirements:
     - ruamel.yaml
     - mamba >=0.4.2
     - tabulate
+    # for python 3.6 compatibility
+    - dataclasses
 
 test:
   imports:
