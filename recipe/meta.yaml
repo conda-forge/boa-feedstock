@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.0.1.dev2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/TheSnakePit/boa/archive/{{ version }}.tar.gz
-  sha256: 1e8cc53a999691353ba7e7dcb4b215713bab1d7f8079f5186d4fb81667863463
+  sha256: 3ca0d07f0cb307d55c9da3faa906f00bd1c20174fec1227ce25483474ce93dae
 
 build:
   noarch: python
@@ -23,11 +23,11 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - conda-build >=3.19.2,<4
+    - conda-build 3.20.*
     - pyyaml
     - colorama
     - ruamel.yaml
-    - mamba >=0.4.2
+    - mamba 0.5.*
     - tabulate
     # for python 3.6 compatibility
     - dataclasses
