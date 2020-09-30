@@ -1,18 +1,18 @@
 {% set name = "boa" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/TheSnakePit/boa/archive/{{ version }}.tar.gz
-  sha256: 3ca0d07f0cb307d55c9da3faa906f00bd1c20174fec1227ce25483474ce93dae
+  url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
+  sha256: bc79d13cbf7721f93ea1aa78295e3d7ac7cf31f3fa5262da5fb6ea83c003003e
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: $PYTHON -m pip install . --no-deps -vv
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
     - boa = boa.cli.boa:main
@@ -29,6 +29,8 @@ requirements:
     - ruamel.yaml
     - mamba 0.5.*
     - tabulate
+    - jinja2
+    - rich
     # for python 3.6 compatibility
     - dataclasses
 
@@ -40,7 +42,7 @@ test:
     - boa -h
 
 about:
-  home: https://github.com/TheSnakePit/boa
+  home: https://github.com/mamba-org/boa
   license: BSD-3-Clause
   license_file: LICENSE
   summary: The mamba-powered conda package builder
