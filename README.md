@@ -1,7 +1,7 @@
 About boa
 =========
 
-Home: https://github.com/TheSnakePit/boa
+Home: https://github.com/mamba-org/boa
 
 Package license: BSD-3-Clause
 
