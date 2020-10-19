@@ -5,11 +5,9 @@ Home: https://github.com/mamba-org/boa
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/boa-feedstock/blob/master/LICENSE.txt)
 
 Summary: The mamba-powered conda package builder
-
-
 
 Current build status
 ====================
