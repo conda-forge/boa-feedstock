@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: 95e601925815972b05f4c2c196cec7817d1cdf59ed4408f933501937cdbb6c73
+  sha256: 2096265a18d4ba57fc395145a408081ff8313801b1c36f4d610578728ca0dea1
 
 build:
   noarch: python
@@ -24,11 +24,9 @@ requirements:
   run:
     - python >=3.6
     - conda-build 3.20.*
+    - mamba 0.6.*
     - pyyaml
-    - colorama
     - ruamel.yaml
-    - mamba 0.5.*
-    - tabulate
     - jinja2
     - rich
     # for python 3.6 compatibility
