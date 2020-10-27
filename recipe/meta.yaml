@@ -11,7 +11,6 @@ source:
 
 build:
   noarch: python
-  number: 0
   script: $PYTHON -m pip install . --no-deps -vv
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
@@ -19,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - conda-build 3.20.*
     - mamba >=0.6.4
     - ruamel.yaml
@@ -30,7 +29,8 @@ requirements:
     - rich
     - prompt_toolkit
     - json5
-    - inotify_simple
+    - jsonschema
+    - inotify_simple  # [unix]
     # for python 3.6 compatibility
     - dataclasses
 
