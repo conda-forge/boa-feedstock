@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,28 +7,30 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: 2096265a18d4ba57fc395145a408081ff8313801b1c36f4d610578728ca0dea1
+  sha256: 86fe7033ab2a7335284f62465587648ef037c7ac03111c01da464852e4631d36
 
 build:
-  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   number: 0
-  script: $PYTHON -m pip install . --no-deps -vv
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
     - boa = boa.cli.boa:main
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - conda-build 3.20.*
-    - mamba 0.6.*
-    - pyyaml
+    - mamba >=0.6.4
     - ruamel.yaml
     - jinja2
     - rich
+    - prompt_toolkit
+    - json5
+    - jsonschema
+    - inotify_simple  # [unix]
     # for python 3.6 compatibility
     - dataclasses
 
