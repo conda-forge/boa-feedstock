@@ -10,8 +10,8 @@ source:
   sha256: 86fe7033ab2a7335284f62465587648ef037c7ac03111c01da464852e4631d36
 
 build:
-  noarch: python
-  script: $PYTHON -m pip install . --no-deps -vv
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
     - boa = boa.cli.boa:main
