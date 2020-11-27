@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: 86fe7033ab2a7335284f62465587648ef037c7ac03111c01da464852e4631d36
+  sha256: 1efebeff2733779b30c1a0bf61a07d63308f6474239286c7b3f0705ccf943ecf
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
@@ -30,6 +30,7 @@ requirements:
     - prompt_toolkit
     - json5
     - jsonschema
+    - joblib
     - inotify_simple  # [unix]
     # for python 3.6 compatibility
     - dataclasses
