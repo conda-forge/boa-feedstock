@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.3.5" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: ddc1112c85be32ee21cdcb4f6fe29abb7d05f3dadd526ec80b0f3027fdf56ec9
+  sha256: 02f67fcd8ef1db3e399c82e9ded34039e741c6accfcebd089747e82fcb356979
 
 build:
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
     - boa = boa.cli.boa:main
