@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: f6bbaef12e694e548d0a4114d685f1b61575a58d7a5d2abfc8e27fb7a00c4c7d
+  sha256: 553709d3a7d6fe5b92094f39284ecc9da9209cd5f1989cc8c5dd5837599e3576
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -26,7 +26,7 @@ requirements:
   run:
     - python
     - conda-build >=3.20,<3.22
-    - mamba >=0.11
+    - mamba >=0.14,<0.16
     - ruamel.yaml
     - jinja2
     - rich
