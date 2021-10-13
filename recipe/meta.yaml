@@ -1,5 +1,5 @@
 {% set name = "boa" %}
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mamba-org/boa/archive/{{ version }}.tar.gz
-  sha256: f028287aacd9a2d107cda7cde9543ee6abd3f24ed30029f012e4aefa98eb15ca
+  sha256: d9ccea1049c29559afcb19cbd89f0e7a72b1c948748a797a2e19d0df18a94b42
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
