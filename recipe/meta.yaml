@@ -12,6 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
+  noarch: python
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
     - boa = boa.cli.boa:main
@@ -26,7 +27,7 @@ requirements:
   run:
     - python
     - conda-build >=3.20,<3.22
-    - mamba >=0.15,<0.16
+    - mamba >=0.16,<0.18
     - ruamel.yaml
     - jinja2
     - rich
@@ -34,7 +35,7 @@ requirements:
     - json5
     - jsonschema
     - joblib
-    - inotify_simple  # [unix]
+    - watchgod
     # for python 3.6 compatibility
     - dataclasses
 
