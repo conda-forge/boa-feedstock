@@ -19,13 +19,13 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python >=3.6                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - conda-build >=3.20,<3.22
     - mamba >=0.16,<0.18
     - ruamel.yaml
