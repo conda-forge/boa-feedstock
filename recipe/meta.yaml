@@ -27,7 +27,7 @@ requirements:
   run:
     - python >=3.6
     - conda-build >=3.20,<3.23
-    - mamba >=0.27.0,<0.28
+    - mamba >=1.0,<1.1
     - ruamel.yaml
     - jinja2
     - rich
