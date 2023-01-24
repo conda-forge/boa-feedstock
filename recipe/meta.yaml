@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
@@ -35,6 +35,9 @@ requirements:
     - watchgod
     # for python 3.6 compatibility
     - dataclasses
+  # Workaround for https://github.com/conda/conda-build/issues/4750
+  run_constrained:
+    - libsolv <0.7.23
 
 test:
   imports:
