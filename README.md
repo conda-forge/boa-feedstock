@@ -148,6 +148,3 @@ Feedstock Maintainers
 * [@mbargull](https://github.com/mbargull/)
 * [@wolfv](https://github.com/wolfv/)
 
-
-<!-- dummy commit to enable rerendering -->
-
