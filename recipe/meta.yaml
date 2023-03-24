@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - conda-mambabuild = boa.cli.mambabuild:main
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.6
     - conda-build >=3.20,<3.24
-    - mamba >=1.0,<1.4
+    - mamba >=1.0,<1.5
     - ruamel.yaml
     - jinja2
     - rich
