@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - conda-build >=3.24,<3.26
+    - conda-build >=3.24
     - mamba >=1.5.0
     - ruamel.yaml
     - jinja2
